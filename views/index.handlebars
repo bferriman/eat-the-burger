@@ -27,3 +27,22 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(document).ready( function() {
+    $(".devour-btn").on("click", function(event) {
+      const id = $(this).data("id");
+      console.log("burger id is " + id);
+      const newDevouredState = {
+        devoured: true
+      };
+
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: newDevouredState
+      }).then( () => {
+        location.reload();
+      });
+    });
+  });
+</script>
