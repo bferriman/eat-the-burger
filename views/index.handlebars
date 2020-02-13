@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>On a Plate</h2>
+      <ul>
+        {{#each burgers}}
+          {{#unless devoured}}
+            <li>
+                {{burger_name}}
+                <button class="devour-btn" data-id="{{id}}">Devour It!</button>
+            </li>
+          {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-sm">
+      <h2>In Your Belly</h2>
+      <ul>
+        {{#each burgers}}
+          {{#if devoured}}
+            <li>
+                {{burger_name}}
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
