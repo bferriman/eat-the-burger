@@ -41,7 +41,7 @@ const orm = {
     });
   },
   insertOne: function(tableName, cols, vals, cb) {
-    const queryString = `INSERT INTO ${tableName} (`;
+    let queryString = `INSERT INTO ${tableName} (`;
     queryString += cols.toString();
     queryString += ") VALUES (";
     queryString += printQuestionMarks(vals.length);
@@ -53,7 +53,7 @@ const orm = {
     });
   },
   updateOne: function(tableName, objColVals, condition, cb) {
-    const queryString = `UPDATE ${tableName} SET `;
+    let queryString = `UPDATE ${tableName} SET `;
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;
