@@ -26,6 +26,20 @@
       </ul>
     </div>
   </div>
+  <div class="row">
+    <div class="col">
+      <h2>Place Your Order!</h2>
+      <form class="create-form">
+
+        <div class="form-group">
+          <label for="brgr">Burger Name:</label>
+          <input type="text" id="brgr" name="name">
+        </div>
+
+        <button type="submit">Cook It</button>
+      </form>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -42,6 +56,21 @@
         data: newDevouredState
       }).then( () => {
         location.reload();
+      });
+    });
+
+    $(".create-form").on("submit", function(event) {
+      event.preventDefault();
+
+      const newBurger = {
+        name: $("#brgr").val().trim(),
+      };
+
+      $.ajax("/api/burgers", {
+        type: "POST",
+        data: newBurger
+      }).then( () => {
+          location.reload();
       });
     });
   });
