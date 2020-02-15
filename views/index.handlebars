@@ -1,20 +1,38 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm">
-      <h2>On a Plate</h2>
+    <div class="col d-flex flex-column flex-md-row align-items-center justify-content-center">
+      <div id="image-div">
+        <img id="burger-img" src="/assets/img/burger.jpg" alt="hamburger">
+      </div>
+      <div id="burger-entry" class="d-flex flex-column align-items-center align-items-md-start justify-content-center">
+        <h2>Place Your Order!</h2>
+        <form class="create-form d-flex">
+          <div class="form-group d-flex flex-column">
+            <label for="brgr">Burger Name:</label>
+            <input type="text" id="brgr" name="name">
+          </div>
+
+          <button id="create-burger" class="btn p-3 m-3" type="submit"><i class="fas fa-fire fa-2x"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="burger-list col-lg p-4 mx-5 my-3">
+      <h2>On Your Plate</h2>
       <ul>
         {{#each burgers}}
           {{#unless devoured}}
             <li>
                 {{burger_name}}
-                <button class="devour-btn" data-id="{{id}}">Devour It!</button>
+                <button class="devour-btn btn" data-id="{{id}}"><i class="fas fa-utensils"></i></button>
             </li>
           {{/unless}}
         {{/each}}
       </ul>
     </div>
-    <div class="col-sm">
-      <h2>In Your Belly</h2>
+    <div class="burger-list col-lg p-4 mx-5 my-3">
+      <h2>Eaten</h2>
       <ul>
         {{#each burgers}}
           {{#if devoured}}
@@ -26,22 +44,9 @@
       </ul>
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <h2>Place Your Order!</h2>
-      <form class="create-form">
-
-        <div class="form-group">
-          <label for="brgr">Burger Name:</label>
-          <input type="text" id="brgr" name="name">
-        </div>
-
-        <button type="submit">Cook It</button>
-      </form>
-    </div>
-  </div>
 </div>
 
+<script src="https://kit.fontawesome.com/b76a162850.js" crossorigin="anonymous"></script>
 <script>
   $(document).ready( function() {
     $(".devour-btn").on("click", function(event) {

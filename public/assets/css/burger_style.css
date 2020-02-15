@@ -1,0 +1,42 @@
+body {
+  background-color: #cfecea;
+}
+
+#burger-img {
+  width: 250px;
+}
+
+#burger-entry {
+  width: 500px;
+  color: #4C433D;
+}
+
+.create-form {
+  font-size: 24px;
+}
+
+#create-burger {
+  width: 75px;
+  background-color: #F16454;
+  border: 2px solid white;
+  color: white;
+}
+
+.burger-list {
+  background-color: white;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 3px;
+  border-color: #4C433D;
+  color: #4C433D;
+  font-size: 18px;
+}
+
+.devour-btn {
+  background-color: #4C433D;
+  color: white;
+}
+
+li {
+  padding: 5px 0px;
+}
