@@ -7,11 +7,17 @@ A silly app built to practice MVC implementation.  The user can create burgers, 
 ## Technologies Used
 
 Implements MVC design pattern
+
 MySQL
+
 Node
+
 Express
+
 Handlebars
+
 ORM (custom)
+
 Bootstrap
 
 ## Credits
