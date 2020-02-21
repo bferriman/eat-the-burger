@@ -20,6 +20,12 @@ ORM (custom)
 
 Bootstrap
 
+## Future Development Opportunities
+
+Add delete functionality for eaten burgers
+
+Add validation to prevent creation of burgers with names that are empty strings
+
 ## Credits
 
 Image by [Pettycon](https://pixabay.com/users/Pettycon-3307648/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1674881) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1674881).
