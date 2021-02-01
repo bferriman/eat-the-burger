@@ -12,11 +12,17 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.insertOne(["burger_name", "devoured"],
-  [req.body.name, false],
-  result => {
-    res.json({ id: result.insertId });
-  });
+  if (req.body.name && req.body.name.length <= 30) {
+    console.log("Input length is: " + req.body.name.length);
+    burger.insertOne(["burger_name", "devoured"],
+    [req.body.name, false],
+    result => {
+      res.json({ id: result.insertId });
+    });  
+  }
+  else {
+    res.status(404).end();
+  }
 });
 
 router.put("/api/burgers/:id", function(req, res) {
